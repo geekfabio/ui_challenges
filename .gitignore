@@ -48,3 +48,4 @@ app.*.map.json
 
 #no include
 /windows
+/linux
