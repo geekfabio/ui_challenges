@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ui_challenges/settings_ui/settings_screen.dart';
+import 'package:ui_challenges/travel_app/travel_home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const SettingsScreenUi(),
+      home: const TravelHomeScreen(),
     );
   }
 }
