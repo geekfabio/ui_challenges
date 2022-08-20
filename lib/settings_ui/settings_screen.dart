@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ui_challenges/helpers/animation/scroll/animated_scroll_view_item.dart';
 
 class SettingsScreenUi extends StatelessWidget {
   const SettingsScreenUi({Key? key}) : super(key: key);
@@ -38,45 +39,17 @@ class SettingsScreenUi extends StatelessWidget {
               height: 24.0,
               child: SizedBox(
                   height: 100,
-                  child: ListView(
-                    children: const [
-                      _CustomButtonOne(
-                        iconData: CupertinoIcons.mail,
-                        text: "Email",
-                      ),
-                      _CustomButtonOne(
-                        iconData: CupertinoIcons.person,
-                        text: "User",
-                      ),
-                      _CustomButtonOne(
-                        iconData: CupertinoIcons.doc,
-                        text: "Privacy Policy",
-                      ),
-                      _CustomButtonOne(
-                        iconData: CupertinoIcons.square_line_vertical_square,
-                        text: "Settings",
-                      ),
-                      _CustomButtonOne(
-                        iconData: CupertinoIcons.info,
-                        text: "Support",
-                      ),
-                      _CustomButtonOne(
-                        iconData: CupertinoIcons.person,
-                        text: "User",
-                      ),
-                      _CustomButtonOne(
-                        iconData: CupertinoIcons.doc,
-                        text: "Privacy Policy",
-                      ),
-                      _CustomButtonOne(
-                        iconData: CupertinoIcons.square_line_vertical_square,
-                        text: "Settings",
-                      ),
-                      _CustomButtonOne(
-                        iconData: CupertinoIcons.info,
-                        text: "Support",
-                      ),
-                    ],
+                  child: ListView.builder(
+                    padding: const EdgeInsets.all(5.0),
+                    itemBuilder: (BuildContext context, int index) {
+                      return const AnimatedScrollViewItem(
+                        curves: Curves.linear,
+                        child: _CustomButtonOne(
+                          iconData: CupertinoIcons.mail,
+                          text: "Email",
+                        ),
+                      );
+                    },
                   )),
             ))
           ],
@@ -98,48 +71,41 @@ class _CustomButtonOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(5.0),
-      child: Stack(children: [
-        InkWell(
-          onTap: () {},
-          child: Container(
-            width: 400,
-            height: 40,
-            decoration: BoxDecoration(
-                color: _AppUtils.primary,
-                borderRadius: BorderRadius.circular(10)),
-            padding: _AppUtils.symetric,
-            margin: _AppUtils.symetric,
-            child: Row(
-              children: [
-                Icon(
-                  iconData,
-                  size: 19,
-                  color: Colors.white,
-                ),
-                const SizedBox(
-                  width: 10,
-                ),
-                Flexible(
-                  fit: FlexFit.tight,
-                  flex: 15,
-                  child: Text(
-                    text,
-                    style: _AppUtils.flatButtonStyle,
-                  ),
-                ),
-                const Spacer(),
-                const Icon(
-                  CupertinoIcons.arrow_right,
-                  color: Colors.white,
-                )
-              ],
+    return Stack(children: [
+      Container(
+        width: 400,
+        height: 40,
+        margin: const EdgeInsets.only(bottom: 15),
+        padding: const EdgeInsets.all(15),
+        decoration: BoxDecoration(
+            color: _AppUtils.primary, borderRadius: BorderRadius.circular(10)),
+        child: Row(
+          children: [
+            Icon(
+              iconData,
+              size: 19,
+              color: Colors.white,
             ),
-          ),
+            const SizedBox(
+              width: 10,
+            ),
+            Flexible(
+              fit: FlexFit.tight,
+              flex: 15,
+              child: Text(
+                text,
+                style: _AppUtils.flatButtonStyle,
+              ),
+            ),
+            const Spacer(),
+            const Icon(
+              CupertinoIcons.arrow_right,
+              color: Colors.white,
+            )
+          ],
         ),
-      ]),
-    );
+      ),
+    ]);
   }
 }
 
