@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_challenges/earbuds_remote/welcome_screen.dart';
 import 'package:ui_challenges/travel_app/travel_home_screen.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const TravelHomeScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }
