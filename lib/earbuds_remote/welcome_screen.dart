@@ -5,8 +5,17 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+class MyState {
+  final int _counter = 0;
+}
+
+class WelcomeScreen extends StatelessWidget implements MyState {
+  WelcomeScreen({Key? key}) : super(key: key);
+
+  @override
+  int _counter = 0;
+  @override
+  _increment() => _counter++;
 
   @override
   Widget build(BuildContext context) {
@@ -106,9 +115,9 @@ class WelcomeScreen extends StatelessWidget {
                   Container(
                     margin: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 20),
-                    child: const Text(
-                      subTitle,
-                      style: TextStyle(
+                    child: Text(
+                      _counter.toString(),
+                      style: const TextStyle(
                           fontWeight: FontWeight.w900,
                           fontSize: 40,
                           color: Color.fromRGBO(4, 13, 37, 1)),
@@ -122,7 +131,9 @@ class WelcomeScreen extends StatelessWidget {
                     height: 50,
                     width: MediaQuery.of(context).size.width,
                     child: TextButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          _increment();
+                        },
                         style: TextButton.styleFrom(
                           backgroundColor: const Color.fromRGBO(3, 23, 55, 1),
                           side: const BorderSide(
