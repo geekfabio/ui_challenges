@@ -6,8 +6,10 @@ import 'package:ui_challenges/delivery_app/your_order_page.dart';
 import 'models/product_model.dart';
 
 class OrderPage extends StatefulWidget {
-  const OrderPage({Key? key, required this.index}) : super(key: key);
+  const OrderPage({Key? key, required this.index, required this.isCoffe})
+      : super(key: key);
   final int index;
+  final bool isCoffe;
   @override
   State<OrderPage> createState() => _OrderPageState();
 }
@@ -20,6 +22,16 @@ class _OrderPageState extends State<OrderPage> {
 
   @override
   Widget build(BuildContext context) {
+    var fruitsColor = [
+      fruitList[widget.index].color.withOpacity(0.6),
+      fruitList[widget.index].color.withOpacity(0.8),
+      fruitList[widget.index].color
+    ];
+    var coffeColor = [
+      coffeList[widget.index].color.withOpacity(0.6),
+      coffeList[widget.index].color.withOpacity(0.8),
+      coffeList[widget.index].color
+    ];
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: Colors.white,
@@ -59,11 +71,7 @@ class _OrderPageState extends State<OrderPage> {
                       topLeft: Radius.circular(16.0),
                       topRight: Radius.circular(16.0)),
                   gradient: LinearGradient(
-                    colors: [
-                      fruitList[widget.index].color.withOpacity(0.7),
-                      fruitList[widget.index].color.withOpacity(0.9),
-                      fruitList[widget.index].color
-                    ],
+                    colors: widget.isCoffe ? coffeColor : fruitsColor,
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                   ),
@@ -78,7 +86,9 @@ class _OrderPageState extends State<OrderPage> {
             child: Hero(
                 tag: "image ${widget.index}",
                 child: Image.asset(
-                  fruitList[widget.index].image,
+                  !widget.isCoffe
+                      ? fruitList[widget.index].image
+                      : coffeList[widget.index].image,
                   fit: BoxFit.contain,
                   height: 280.0,
                   width: 50,
@@ -95,7 +105,9 @@ class _OrderPageState extends State<OrderPage> {
               children: <Widget>[
                 // title
                 Text(
-                  fruitList[widget.index].title,
+                  widget.isCoffe
+                      ? coffeList[widget.index].title
+                      : fruitList[widget.index].title,
                   style: const TextStyle(
                       fontSize: 28.0,
                       color: Colors.black,
@@ -202,12 +214,12 @@ class _OrderPageState extends State<OrderPage> {
                         ),
                       ),
                       onPressed: () {
-                        print(widget.index);
                         Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    YourOrderPage(widget.index)));
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => YourOrderPage(widget.index),
+                          ),
+                        );
                       },
                     )),
               ],

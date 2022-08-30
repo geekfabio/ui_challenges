@@ -39,7 +39,10 @@ class _FoodCardState extends State<FoodCard> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => OrderPage(index: widget.index)));
+                        builder: (context) => OrderPage(
+                              index: widget.index,
+                              isCoffe: widget.isCoffe,
+                            )));
               },
               child: Transform.translate(
                 offset: const Offset(-AppStyes.padding, 0.0),
