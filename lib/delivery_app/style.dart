@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppStyes {
-  static const iconSize = 28.0;
+  static const iconSize = 26.0;
   static const double padding = 24.0;
   static const textSelected = TextStyle(
       fontSize: 14.0, color: AppColors.orange, fontWeight: FontWeight.bold);

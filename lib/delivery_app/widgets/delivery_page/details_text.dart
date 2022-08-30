@@ -7,12 +7,13 @@ import '../../controller/delivery_controller.dart';
 import '../../models/product_model.dart';
 
 class DetailsText extends StatelessWidget {
+  final int index;
+
   DetailsText({
     Key? key,
     required this.index,
   }) : super(key: key);
 
-  final int index;
   late DeliveryController _controller;
   @override
   Widget build(BuildContext context) {
@@ -31,7 +32,7 @@ class DetailsText extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       Text(
-                        productList[_controller.selectedIndex].market,
+                        fruitList[_controller.selectedIndex].market,
                         style: AppStyes.boldText,
                       ),
                       const Spacer(),
@@ -39,7 +40,7 @@ class DetailsText extends StatelessWidget {
                           size: 14.0, color: Colors.black),
                       const SizedBox(width: 4.0),
                       Text(
-                        productList[index].distance,
+                        fruitList[index].distance,
                         style: AppStyes.normalText,
                       ),
                     ],
@@ -57,12 +58,12 @@ class DetailsText extends StatelessWidget {
                   child: Row(
                     children: <Widget>[
                       Text(
-                        productList[_controller.selectedIndex].grams,
+                        fruitList[_controller.selectedIndex].grams,
                         style: AppStyes.normalText,
                       ),
                       const Spacer(),
                       Text(
-                        productList[_controller.selectedIndex].kcal,
+                        fruitList[_controller.selectedIndex].kcal,
                         style: AppStyes.normalText,
                       ),
                     ],
@@ -70,7 +71,7 @@ class DetailsText extends StatelessWidget {
                 ),
               ],
             )
-          : Container(),
+          : const SizedBox(),
     );
   }
 }

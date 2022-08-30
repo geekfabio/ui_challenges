@@ -34,11 +34,14 @@ class CustomTab extends StatelessWidget {
                 : Container(),
 
             // text
-            Text(
-              text,
-              style:
-                  isSelected ? AppStyes.textSelected : AppStyes.textUnselected,
-            ),
+            AnimatedDefaultTextStyle(
+                style: isSelected
+                    ? AppStyes.textSelected
+                    : AppStyes.textUnselected,
+                duration: const Duration(milliseconds: 200),
+                child: Text(
+                  text,
+                ))
           ],
         ),
       ),

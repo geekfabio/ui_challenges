@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:ui_challenges/delivery_app/style.dart';
-import 'package:ui_challenges/delivery_app/widgets/delivery_page/initial_page.dart';
+import 'package:ui_challenges/delivery_app/widgets/delivery_page/coffes_page.dart';
+import 'package:ui_challenges/delivery_app/widgets/delivery_page/fruits_page.dart';
 
 import 'controller/delivery_controller.dart';
 import 'widgets/delivery_page/tab_bar_widget.dart';
@@ -20,11 +21,11 @@ class _DeliveryAppState extends State<DeliveryApp> {
 
   List<Widget> pages = [
     // initial pages
-    InitialPage(),
+    FruitsPage(),
     //Next Pages
-    Container(color: Colors.indigo),
+    CoffesPage(),
     Container(color: Colors.yellow),
-    InitialPage(),
+    FruitsPage(),
     Container(color: Colors.pinkAccent),
   ];
 
