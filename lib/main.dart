@@ -1,22 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:ui_challenges/earbuds_remote/home_screen.dart';
+import 'package:provider/provider.dart';
+import 'package:ui_challenges/delivery_app/controller/delivery_controller.dart';
 
+import 'my_app.dart';
+
+// ? normal run app
+// void main() {
+//   runApp( const MyApp());
+// }
+
+// ? delivery run app
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'UI Challenges',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomeScreen(),
-    );
-  }
+  runApp(ChangeNotifierProvider(
+      create: (context) => DeliveryController(),
+      child: const MyApp()));
 }
