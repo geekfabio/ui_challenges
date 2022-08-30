@@ -18,8 +18,15 @@ class DeliveryApp extends StatefulWidget {
 class _DeliveryAppState extends State<DeliveryApp> {
   late DeliveryController _controller;
 
-  // tabbarview item list
-  List<Widget> pages = [];
+  List<Widget> pages = [
+    // initial pages
+    InitialPage(),
+    //Next Pages
+    Container(color: Colors.indigo),
+    Container(color: Colors.yellow),
+    InitialPage(),
+    Container(color: Colors.pinkAccent),
+  ];
 
   double padding = 24.0;
 
@@ -27,7 +34,6 @@ class _DeliveryAppState extends State<DeliveryApp> {
   Widget build(BuildContext context) {
     // _controller = Provider.of<DeliveryController>(context);
     _controller = context.watch<DeliveryController>();
-    _definePages();
 
     return Scaffold(
       // appbar
@@ -63,17 +69,5 @@ class _DeliveryAppState extends State<DeliveryApp> {
         ],
       ),
     );
-  }
-
-  _definePages() {
-    pages = [
-      // initial pages
-      InitialPage(),
-      //Next Pages
-      Container(color: Colors.indigo),
-      Container(color: Colors.yellow),
-      InitialPage(),
-      Container(color: Colors.pinkAccent),
-    ];
   }
 }
