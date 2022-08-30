@@ -33,14 +33,14 @@ class _TabBarWidgetState extends State<TabBarWidget> {
             },
           ),
           CustomTab(
-            text: "Vegetables",
+            text: "Coffees",
             isSelected: _controller.currentIndex == 1,
             onPressed: () {
               _controller.onPressed(1);
             },
           ),
           CustomTab(
-            text: "Coffees",
+            text: "Vegetables",
             isSelected: _controller.currentIndex == 2,
             onPressed: () {
               _controller.onPressed(2);
