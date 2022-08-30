@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:ui_challenges/delivery_app/order_page.dart';
 import 'package:ui_challenges/delivery_app/style.dart';
 
 import '../../models/product_model.dart';
 
 class FoodCard extends StatefulWidget {
-  const FoodCard({Key? key, required this.index}) : super(key: key);
+  const FoodCard({Key? key, required this.index, required this.isCoffe})
+      : super(key: key);
   final int index;
+  final bool isCoffe;
   @override
   State<FoodCard> createState() => _FoodCardState();
 }
@@ -13,6 +16,16 @@ class FoodCard extends StatefulWidget {
 class _FoodCardState extends State<FoodCard> {
   @override
   Widget build(BuildContext context) {
+    var fruitsColor = [
+      fruitList[widget.index].color.withOpacity(0.6),
+      fruitList[widget.index].color.withOpacity(0.8),
+      fruitList[widget.index].color
+    ];
+    var coffeColor = [
+      coffeList[widget.index].color.withOpacity(0.6),
+      coffeList[widget.index].color.withOpacity(0.8),
+      coffeList[widget.index].color
+    ];
     return Expanded(
       child: Stack(
         children: <Widget>[
@@ -23,14 +36,10 @@ class _FoodCardState extends State<FoodCard> {
             bottom: 0,
             child: InkWell(
               onTap: () {
-                setState(() {
-                  //   Navigator.push(
-                  //       context,
-                  //       MaterialPageRoute(
-                  //           builder: (context) =>
-                  //               OrderPage(index)));
-                  //
-                });
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => OrderPage(index: widget.index)));
               },
               child: Transform.translate(
                 offset: const Offset(-AppStyes.padding, 0.0),
@@ -46,11 +55,7 @@ class _FoodCardState extends State<FoodCard> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(32.0),
                       gradient: LinearGradient(
-                        colors: [
-                          productList[widget.index].color.withOpacity(0.6),
-                          productList[widget.index].color.withOpacity(0.8),
-                          productList[widget.index].color
-                        ],
+                        colors: widget.isCoffe ? coffeColor : fruitsColor,
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                       ),
@@ -70,7 +75,9 @@ class _FoodCardState extends State<FoodCard> {
               children: <Widget>[
                 // tag
                 Text(
-                  productList[widget.index].tag,
+                  widget.isCoffe
+                      ? coffeList[widget.index].tag
+                      : fruitList[widget.index].tag,
                   style: const TextStyle(
                       fontSize: 20.0,
                       color: Colors.white,
@@ -79,7 +86,9 @@ class _FoodCardState extends State<FoodCard> {
                 const SizedBox(height: AppStyes.padding / 2),
                 // title
                 Text(
-                  productList[widget.index].title,
+                  widget.isCoffe
+                      ? coffeList[widget.index].title
+                      : fruitList[widget.index].title,
                   style: const TextStyle(
                       fontSize: 26.0,
                       color: Colors.white,
@@ -108,7 +117,10 @@ class _FoodCardState extends State<FoodCard> {
                         child: toHeroContext.widget,
                       );
                     },
-                    child: Image.asset(productList[widget.index].image,
+                    child: Image.asset(
+                        widget.isCoffe
+                            ? coffeList[widget.index].image
+                            : fruitList[widget.index].image,
                         fit: BoxFit.contain)),
               ],
             ),
