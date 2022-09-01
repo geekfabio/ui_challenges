@@ -13,5 +13,6 @@ A Very Good Project created by @TrindadeCode on linkedin.
 | Folder name | Image |
 | ------ | ------ |
 | Settings UI | image here |
-| Earbuds remote | ![Image](images/delivery.webm) |
+| Earbuds remote | image here |
 | Delivery App | ![Image](images/delivery.gif) |
+| Pokemon UI | ![Image](images/pokemon_ui.jfif) |
