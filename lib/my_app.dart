@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'delivery_app/delivery_page.dart';
+import 'package:ui_challenges/pokemon_ui/pokemon_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -14,8 +13,8 @@ class MyApp extends StatelessWidget {
       ),
       //home: WelcomeScreen(),
       //home: SettingsScreenUi(),
-
-      home: const DeliveryApp(),
+      //home: const DeliveryApp(),
+      home: const PokemonPage(),
     );
   }
 }
