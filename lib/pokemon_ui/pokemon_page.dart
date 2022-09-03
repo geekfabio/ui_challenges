@@ -1,8 +1,7 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ui_challenges/pokemon_ui/style.dart';
+import 'package:ui_challenges/pokemon_ui/widgets/card_pokemon_info.dart';
 
 class PokemonPage extends StatelessWidget {
   const PokemonPage({Key? key}) : super(key: key);
@@ -10,7 +9,9 @@ class PokemonPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
-    var extraHeight = 0.1;
+    //Testing
+    String weightPokemon = "123.05kg";
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
@@ -93,100 +94,8 @@ class PokemonPage extends StatelessWidget {
             // ? Card
             Align(
               alignment: Alignment.bottomCenter,
-              child: Placeholder(
-                fallbackHeight: 300,
-                color: Colors.yellow,
-                child: Container(
-                  margin:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                  width: screenSize.width,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.white24),
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.white.withOpacity(0.12),
-                  ),
-                  child: ClipRect(
-                      child: BackdropFilter(
-                    filter: ImageFilter.blur(sigmaX: 2.0, sigmaY: 2.0),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Column(
-                        children: [
-                          //? Row header
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              const Text("123.05kg",
-                                  style: TextStyle(
-                                      fontSize: 18.0,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w500)),
-                              Container(
-                                  width: 30,
-                                  height: 30,
-                                  decoration: const BoxDecoration(
-                                      color: AppColors.primaryBlue,
-                                      shape: BoxShape.circle),
-                                  child: const Icon(
-                                    FontAwesomeIcons.droplet,
-                                    color: Colors.white,
-                                    size: 15,
-                                  )),
-                              const Text(
-                                "2m",
-                                style: TextStyle(
-                                    fontSize: 18.0,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.w500),
-                              ),
-                            ],
-                          ), //? Row Header Elementes
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Text(
-                                "Peso",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 20,
-                              ),
-                              Text(
-                                "Elemento",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
-                              Text(
-                                "Altura",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ],
-                          ),
-
-                          // ? Row elementes
-                          const SizedBox(
-                            height: 10,
-                          ),
-
-                          //Row Spacer
-                          const SizedBox(
-                            height: 20,
-                            child: Placeholder(
-                              color: Colors.blue,
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  )),
-                ),
-              ),
+              child: CardPokemonInfo(
+                  screenSize: screenSize, weightPokemon: weightPokemon),
             ),
           ]),
         ),
