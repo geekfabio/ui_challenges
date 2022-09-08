@@ -99,7 +99,7 @@ class SettingsButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
-      InkWell(
+      GestureDetector(
         onTap: onTap,
         child: Container(
           width: 400,
