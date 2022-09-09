@@ -45,12 +45,10 @@ class PokemonPage extends StatelessWidget {
         child: SizedBox(
           width: screenSize.width,
           height: screenSize.height,
-          child: Stack(children: [
+          child: Stack(alignment: Alignment.center, children: [
             // ? Main image
             Positioned(
               top: 40,
-              left: 0,
-              right: 0,
               child: SizedBox(
                 height: 200,
                 child: Image.asset("assets/images/pokemon/Blastoise.webp"),
@@ -58,7 +56,6 @@ class PokemonPage extends StatelessWidget {
             ),
             Positioned(
               bottom: 0.5,
-              left: 12,
               child: Transform.rotate(
                 angle: 300,
                 alignment: Alignment.centerLeft,
