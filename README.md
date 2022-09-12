@@ -18,11 +18,10 @@ A Very Good Project created by @TrindadeCode on linkedin.
 | Pokemo App | ![Image](images/pokemon_ui.jfif) |
 | Job App | image here, date: 08/09/2022  |
 
-
 ## Contributions
 
 We love the open source flutter community!💙 If you'd like to contribute to one or all UI, feel free to open a pull-request at any time. To give new contributors exciting first challenges.
 
-## Questions or Issues? 
+## Questions or Issues?
 
-If something does not feel right or if you have questions, feel free to contact us. You can do so by [creating an issue](https://github.com/geekfabio/ui_challenges/issues).
+If something does not feel right or if you have questions, feel free to contact us. You can do so by [creating an issue](https://github.com/geekfabio/ui_challenges/issues)
