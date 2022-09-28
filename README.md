@@ -1,6 +1,7 @@
 # ui_challenges
 
 [![platform](https://img.shields.io/badge/platform-iOS-orange)](https://www.android.com)
+[![platform](https://img.shields.io/badge/platform-Android-orange)](https://www.android.com)
 [![GitHub license](https://img.shields.io/badge/License-Apache2.0-blue.svg)](LICENSE)
 ![Repository size](https://img.shields.io/github/repo-size/geekfabio/ui_challenges)
 ![GitHub stars](https://img.shields.io/github/stars/geekfabio/ui_challenges?style=social)
