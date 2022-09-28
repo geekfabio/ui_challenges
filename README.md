@@ -2,15 +2,15 @@
 
 [![platform](https://img.shields.io/badge/platform-iOS-orange)](https://www.android.com)
 [![GitHub license](https://img.shields.io/badge/License-Apache2.0-blue.svg)](LICENSE)
-![Repository size](https://img.shields.io/github/repo-size/geekfabio/Animatify-ios)
-![GitHub stars](https://img.shields.io/github/stars/geekfabio/Animatify-ios?style=social)
-![GitHub forks](https://img.shields.io/github/forks/geekfabio/Animatify-ios?style=social)
+![Repository size](https://img.shields.io/github/repo-size/geekfabio/ui_challenges)
+![GitHub stars](https://img.shields.io/github/stars/geekfabio/ui_challenges?style=social)
+![GitHub forks](https://img.shields.io/github/forks/geekfabio/ui_challenges?style=social)
 ![GitHub follow](https://img.shields.io/github/followers/geekfabio?style=social)
 
 ## Getting Started 🚀
 
-A Very Good Project created by @TrindadeCode on linkedin. That contains various UI Challenges
-made with Flutter 💙
+A Very Good Project created by @TrindadeCode on linkedin.
+That contains various UI Challenges, made with Flutter 💙
 
 ## Challange Table 🚀
 
