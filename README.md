@@ -20,7 +20,8 @@ That contains various UI Challenges, made with Flutter 💙
 | Settings UI | image here |
 | Earbuds remote | image here |
 | Delivery App | ![Image](images/delivery.gif) |
-| Pokemo App | ![Image](images/pokemon_ui.jfif) |
+| Pokemon App | ![Image](images/pokemon_ui.jfif) |
+| Light Switch UI | ![Image](images/lightswitch.gif) |
 | Job App | image here, date: 08/09/2022  |
 
 ## Contributions
