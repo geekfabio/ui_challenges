@@ -1,12 +1,16 @@
 # ui_challenges
 
-Comecei com essa challange, por causa do novo emprego
-preciso de praticar muito mais animações e telas, toda semana uma UI Nova
-com o tempo limite de 2 mesês.
+[![platform](https://img.shields.io/badge/platform-iOS-orange)](https://www.android.com)
+[![GitHub license](https://img.shields.io/badge/License-Apache2.0-blue.svg)](LICENSE)
+![Repository size](https://img.shields.io/github/repo-size/geekfabio/Animatify-ios)
+![GitHub stars](https://img.shields.io/github/stars/geekfabio/Animatify-ios?style=social)
+![GitHub forks](https://img.shields.io/github/forks/geekfabio/Animatify-ios?style=social)
+![GitHub follow](https://img.shields.io/github/followers/geekfabio?style=social)
 
 ## Getting Started 🚀
 
-A Very Good Project created by @TrindadeCode on linkedin.
+A Very Good Project created by @TrindadeCode on linkedin. That contains various UI Challenges
+made with Flutter 💙
 
 ## Challange Table 🚀
 
@@ -21,6 +25,10 @@ A Very Good Project created by @TrindadeCode on linkedin.
 ## Contributions
 
 We love the open source flutter community!💙 If you'd like to contribute to one or all UI, feel free to open a pull-request at any time. To give new contributors exciting first challenges.
+
+## Spread the word
+
+Liked the project? Just give it a star ⭐️ and spread the word!
 
 ## Questions or Issues?
 

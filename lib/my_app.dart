@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
-import 'package:ui_challenges/work_app/screens/splash/splash_screen.dart';
+
+import 'delivery_app/delivery_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -17,10 +18,9 @@ class MyApp extends StatelessWidget {
       ),
       //home: WelcomeScreen(),
       //home: SettingsScreenUi(),
-      //home: const DeliveryApp(),
       // home: const PokemonPage(),
       //home: const WelcomeScreen(), // Work App
-      home: const SplashScreen(),
+      home: const DeliveryApp(),
     );
   }
 }
